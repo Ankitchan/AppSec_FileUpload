@@ -1,0 +1,12 @@
+<?php 
+
+$con = mysqli_connect("localhost","root","root123", "appsecdb"); //or die ('Error Connectiong to mysql: '.mysql_error());
+//$dbname = "appsecdb";
+if(!$con)
+{
+	echo "Mysql connection error";
+}
+//echo "Connection successful"
+//mysql_select_db($dbname,$con);
+
+?>

@@ -1,0 +1,22 @@
+<?php 
+include("config.php");
+
+mysqli_query($con, "SELECT * FROM user_image WHERE id=".$_GET['id'])
+//$res=mysql_query("SELECT * FROM user_image WHERE id=".$_GET['id']) or die(mysql_error());
+while($row = mysql_fetch_array($res)){  
+//echo $row['image'];
+$resup=mysql_query("update user_image set caption='".$_GET['cap']."' WHERE id=".$_GET['id']) or die(mysql_error());
+
+}
+
+if($resup)
+{
+echo "<script>;
+alert('caption updated');
+window.location = 'viewImage.php'; </script>";
+}
+else
+echo "<script>
+alert('problem in caption');
+window.location = 'viewImage.php'; </script>";
+ ?>
