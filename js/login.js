@@ -1,6 +1,6 @@
 var jqueryValidator;
-
-$.validator.addMethod("regex_valid", function(value,element){
+	//Code to implement login validations
+	$.validator.addMethod("regex_valid", function(value,element){
 
 	if (value == '') {
 		return t;
@@ -11,9 +11,13 @@ $.validator.addMethod("regex_valid", function(value,element){
 	
 	}, "Please provide proper password");
 
+
 $(document).ready(function(){
 
-	jqueryValidator = $("#loginform").validate({
+	
+	
+	jqueryValidator = $("form[name='frm']").validate({
+
 
 		rules : {
 				
@@ -22,7 +26,7 @@ $(document).ready(function(){
 				minlength: 6,
 				maxlength: 25
 			},
-			pass : {
+			password : {
 				required:true,
 				minlength:8,
 				maxlength:45,
@@ -30,7 +34,7 @@ $(document).ready(function(){
 			}
 		},
 
-		mesages : {
+		messages : {
 
 		    uname : {
 			    required : "Please specify User Name",
@@ -38,7 +42,7 @@ $(document).ready(function(){
 			    maxlength : "cannot be greater than 25 characters"
 		    },
 		  
-		    pass : {
+		    password : {
 			    required : "Please provide password",
 			    minlength : "Password should be minimum of 8 characters",
 			    maxlength : "Password cannot be greater than 45 characters"

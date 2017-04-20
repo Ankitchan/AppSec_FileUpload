@@ -41,3 +41,7 @@ bootstrap.css:4244
     margin-top: -150px; /* negative value of footer height */
 
 }
+
+.log-out-custom {
+    margin-top: 10px;
+}
