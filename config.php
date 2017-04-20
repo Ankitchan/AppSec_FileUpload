@@ -3,7 +3,7 @@
 /*
 Code to connect to mysql database
 */
-$con = mysqli_connect("localhost","root","root123", "appsecdb"); //or die ('Error Connectiong to mysql: '.mysql_error());
+$con = mysqli_connect("localhost","root","", "appsecdb"); //or die ('Error Connectiong to mysql: '.mysql_error());
 //$dbname = "appsecdb";
 if(mysqli_connect_errno())
 {
